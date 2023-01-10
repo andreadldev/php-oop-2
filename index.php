@@ -73,8 +73,8 @@ $bed_2 = new Bed('Bed 2', $Categories['cat'], 69, 'pink', 'Polyester Fiber', '  
                 <ul class="text-start">
                     <li>Price: <?php echo $bed_1->price ?>$ </li>
                     <li>Color: <?php echo ucfirst($bed_1->color) ?></li>
-                    <li>Size: <?php echo ucfirst($bed_1->material) ?></li>
-                    <li>Size: <?php echo ucfirst($bed_1->dimensions) ?></li>
+                    <li>Material: <?php echo ucfirst($bed_1->material) ?></li>
+                    <li>Dimensions: <?php echo ucfirst($bed_1->dimensions) ?></li>
                 </ul>
             </div>
         </div>
@@ -87,8 +87,8 @@ $bed_2 = new Bed('Bed 2', $Categories['cat'], 69, 'pink', 'Polyester Fiber', '  
                 <ul class="text-start">
                     <li>Price: <?php echo $bed_2->price ?>$ </li>
                     <li>Color: <?php echo ucfirst($bed_2->color) ?></li>
-                    <li>Size: <?php echo ucfirst($bed_2->material) ?></li>
-                    <li>Size: <?php echo ucfirst($bed_2->dimensions) ?></li>
+                    <li>Material: <?php echo ucfirst($bed_2->material) ?></li>
+                    <li>Dimensions: <?php echo ucfirst($bed_2->dimensions) ?></li>
                 </ul>
             </div>
         </div>
