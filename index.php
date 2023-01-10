@@ -7,11 +7,16 @@ $Categories = [
     'cat' => $cat = new Category('Cat', 'https://cdn-icons-png.flaticon.com/512/208/208132.png')
 ];
 
-$snack_1 = new Food('Snack 1', $Categories['dog'], 49, 'beef', 'large');
-$snack_2 = new Food('Snack 2', $Categories['dog'], 39, 'chicken', 'medium');
-$snack_3 = new Food('Snack 3', $Categories['cat'], 34, 'chicken', 'small');
-$bed_1 = new Bed('Bed 1', $Categories['dog'], 79, 'white', 'Polyester Fiber', ' 18 in L x 20 in W');
-$bed_2 = new Bed('Bed 2', $Categories['cat'], 69, 'pink', 'Polyester Fiber', '  20 in L x 17 in W')
+$Snacks = [
+    new Food('Snack 1', $Categories['dog'], 49, 'beef', 'large'),
+    new Food('Snack 2', $Categories['dog'], 39, 'chicken', 'medium'),
+    new Food('Snack 3', $Categories['cat'], 34, 'chicken', 'small')
+];
+
+$Beds = [
+    new Bed('Bed 1', $Categories['dog'], 79, 'white', 'Polyester Fiber', ' 18 in L x 20 in W'),
+    new Bed('Bed 2', $Categories['cat'], 69, 'pink', 'Polyester Fiber', '  20 in L x 17 in W')
+]
 ?>
 
 <!DOCTYPE html>
@@ -27,68 +32,68 @@ $bed_2 = new Bed('Bed 2', $Categories['cat'], 69, 'pink', 'Polyester Fiber', '  
 <body>
     <div class="container py-5 d-flex justify-content-around flex-wrap">    
         <div class="card mb-3 position-relative" style="width: 18rem;">
-        <img class="top-left" src="<?php echo $snack_1->category->img?>" alt="">
+        <img class="top-left" src="<?php echo $Snacks[0]->category->img?>" alt="">
             <img class="w-50 pt-4 mx-auto" src="https://s7d2.scene7.com/is/image/PetSmart/5266170?$CLEARjpg$" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title text-center"><?php echo $snack_1->name ?></h5>
+                <h5 class="card-title text-center"><?php echo $Snacks[0]->name ?></h5>
                 <ul class="text-start">
-                    <li>Price: <?php echo $snack_1->price ?>$ </li>
-                    <li>Ingredient: <?php echo ucfirst($snack_1->ingredient) ?></li>
-                    <li>Size: <?php echo ucfirst($snack_1->size) ?></li>
+                    <li>Price: <?php echo $Snacks[0]->price ?>$ </li>
+                    <li>Ingredient: <?php echo ucfirst($Snacks[0]->ingredient) ?></li>
+                    <li>Size: <?php echo ucfirst($Snacks[0]->size) ?></li>
                 </ul>
             </div>
         </div>
 
         <div class="card mb-3 position-relative" style="width: 18rem;">
-            <img class="top-left" src="<?php echo $snack_2->category->img?>" alt="">
+            <img class="top-left" src="<?php echo $Snacks[1]->category->img?>" alt="">
             <img class="w-50 pt-4 mx-auto" src="https://s7d2.scene7.com/is/image/PetSmart/5279933?$CLEARjpg$" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title text-center"><?php echo $snack_2->name ?></h5>
+                <h5 class="card-title text-center"><?php echo $Snacks[1]->name ?></h5>
                 <ul class="text-start">
-                    <li>Price: <?php echo $snack_2->price ?>$ </li>
-                    <li>Ingredient: <?php echo ucfirst($snack_2->ingredient) ?></li>
-                    <li>Size: <?php echo ucfirst($snack_2->size) ?></li>
+                    <li>Price: <?php echo $Snacks[1]->price ?>$ </li>
+                    <li>Ingredient: <?php echo ucfirst($Snacks[1]->ingredient) ?></li>
+                    <li>Size: <?php echo ucfirst($Snacks[1]->size) ?></li>
                 </ul>
             </div>
         </div>
 
         <div class="card mb-3 position-relative" style="width: 18rem;">
-            <img class="top-left" src="<?php echo $snack_3->category->img?>" alt="">
+            <img class="top-left" src="<?php echo $Snacks[2]->category->img?>" alt="">
             <img class="w-50 pt-4 mx-auto" src="https://s7d2.scene7.com/is/image/PetSmart/5154821?$CLEARjpg$" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title text-center"><?php echo $snack_3->name ?></h5>
+                <h5 class="card-title text-center"><?php echo $Snacks[2]->name ?></h5>
                 <ul class="text-start">
-                    <li>Price: <?php echo $snack_3->price ?>$ </li>
-                    <li>Ingredient: <?php echo ucfirst($snack_3->ingredient) ?></li>
-                    <li>Size: <?php echo ucfirst($snack_3->size) ?></li>
+                    <li>Price: <?php echo $Snacks[2]->price ?>$ </li>
+                    <li>Ingredient: <?php echo ucfirst($Snacks[2]->ingredient) ?></li>
+                    <li>Size: <?php echo ucfirst($Snacks[2]->size) ?></li>
                 </ul>
             </div>
         </div>
 
         <div class="card mb-3 position-relative" style="width: 18rem;">
-            <img class="top-left" src="<?php echo $bed_1->category->img?>" alt="">
+            <img class="top-left" src="<?php echo $Beds[0]->category->img?>" alt="">
             <img class="w-50 pt-4 mx-auto" src="https://s7d2.scene7.com/is/image/PetSmart/5334527?$CLEARjpg$" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title text-center"><?php echo $bed_1->name ?></h5>
+                <h5 class="card-title text-center"><?php echo $Beds[0]->name ?></h5>
                 <ul class="text-start">
-                    <li>Price: <?php echo $bed_1->price ?>$ </li>
-                    <li>Color: <?php echo ucfirst($bed_1->color) ?></li>
-                    <li>Material: <?php echo ucfirst($bed_1->material) ?></li>
-                    <li>Dimensions: <?php echo ucfirst($bed_1->dimensions) ?></li>
+                    <li>Price: <?php echo $Beds[0]->price ?>$ </li>
+                    <li>Color: <?php echo ucfirst($Beds[0]->color) ?></li>
+                    <li>Material: <?php echo ucfirst($Beds[0]->material) ?></li>
+                    <li>Dimensions: <?php echo ucfirst($Beds[0]->dimensions) ?></li>
                 </ul>
             </div>
         </div>
 
         <div class="card mb-3 position-relative" style="width: 18rem;">
-            <img class="top-left" src="<?php echo $bed_2->category->img?>" alt="">
+            <img class="top-left" src="<?php echo $Beds[1]->category->img?>" alt="">
             <img class="w-50 pt-4 mx-auto" src="https://s7d2.scene7.com/is/image/PetSmart/5321111?$CLEARjpg$" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title text-center"><?php echo $bed_2->name ?></h5>
+                <h5 class="card-title text-center"><?php echo $Beds[1]->name ?></h5>
                 <ul class="text-start">
-                    <li>Price: <?php echo $bed_2->price ?>$ </li>
-                    <li>Color: <?php echo ucfirst($bed_2->color) ?></li>
-                    <li>Material: <?php echo ucfirst($bed_2->material) ?></li>
-                    <li>Dimensions: <?php echo ucfirst($bed_2->dimensions) ?></li>
+                    <li>Price: <?php echo $Beds[1]->price ?>$ </li>
+                    <li>Color: <?php echo ucfirst($Beds[1]->color) ?></li>
+                    <li>Material: <?php echo ucfirst($Beds[1]->material) ?></li>
+                    <li>Dimensions: <?php echo ucfirst($Beds[1]->dimensions) ?></li>
                 </ul>
             </div>
         </div>
