@@ -1,10 +1,12 @@
-<?php 
+<?php
+require_once __DIR__."/../classes/traits.php";
+
 class Product {
     public $name;
     public $category;
     public $price;
-    public $img;
-
+    use Image;
+    
     public function __construct(string $name, $category, int $price, string $img) {
         $this->name=$name;
         $this->category=$category;
